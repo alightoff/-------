@@ -1,0 +1,214 @@
+/* JS стили */
+.scroll__hidden {
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Основной контент */
+
+.main {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Левая сторона */
+
+.left__side {
+  display: inline-block;
+  width: 20%;
+  height: 100vh;
+  border-right: solid 1px #000;
+  /* border-width: thick; */
+  /* background-color: #0400ff; */
+}
+
+.left__side-legend {
+  display: flex;
+  justify-content: center;
+  border-bottom: solid 1px #000;
+  padding: 3px;
+}
+
+.left__side-btn {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  height: 30px;
+  transition: all 0.3s;
+}
+
+.left__side-btn:hover {
+  transform: scale(.97);
+  box-shadow: 0px 0px 25px 1px rgba(34, 60, 80, 0.29);
+}
+
+.left__side-btn:not(:first-child) {
+  margin-top: 5px;  
+}
+
+.left__side-btns {
+  margin-bottom: 15px;
+}
+
+.left__side-files {
+  border-top: 1px solid #000;
+}
+
+.saved__file {
+  margin: 0 10% 0;
+  width: 70%;
+  padding: 3px;
+  margin-top: 15px;
+}
+
+.saved__file:hover {
+  transform: scale(.99);
+  box-shadow: 0px 0px 25px 1px rgba(34, 60, 80, 0.29);
+}
+
+.saved__file:focus {
+  background-color: black;
+  color: white;
+}
+
+.saved__file-item {
+  position: relative;
+  transition: all 3s;
+}
+
+.delete {
+  display: none;
+  width: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 36%;
+  right: 10%;
+  z-index: 4;
+}
+
+/* .delete-item {
+  display: block;
+  z-index: 3;
+} */
+
+.saved__file-item:hover .delete {
+  display: block;
+}
+
+/* Сам блокнот с именем */
+
+.main__notebook {
+  display: inline-block;
+  width: 80%;
+  /* background-color: #000; */
+}
+
+.main__notebook-title {
+  height: 43px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: inherit;
+  border-bottom: solid 1px #000;
+}
+
+.main__notebook-title-item {
+  display: flex;
+  justify-content: center;
+}
+
+.notebook {
+  margin-top: 43px;
+  width: 100%;
+  height: 100%;
+  resize: none;
+  border: none;
+  outline: none;
+}
+
+/* Модальное окно */
+
+.modal__window {
+  
+}
+
+.modal__window-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  width: 40%;
+  /* height: 400px; */
+  padding: 50px 20px;
+  background-color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border: #000 solid 1px;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+.modal__window-cross {
+  width: 15px;
+  position: fixed;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+}
+
+.modal__window-title {
+  margin-bottom: 40px;
+}
+
+.modal__window-subtitle {
+  margin-bottom: 15px;
+  font-size: 17px;
+}
+
+.modal__window-form {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s;
+}
+
+#fileName {
+  display: block;
+  margin: 0 auto;
+  width: 250px;
+  margin-bottom: 40px;
+  border-radius: 5px;
+}
+
+#saveBtn {
+  display: block;
+  margin: 0 auto;
+  height: 40px;
+  width: 150px;
+  border-radius: 5px;
+  background-color: rgb(1, 221, 1);
+}
+
+#saveBtn:hover {
+  transform: scale(.97);
+}
+
+.opacity {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  z-index: 1;
+}
